@@ -23,7 +23,8 @@ body {
 h1,
 h2,
 h3,
-p {
+p,
+figure {
   margin: 0;
 }
 
@@ -274,6 +275,26 @@ ul.contact-container {
 .features .text {
   font-size: 14px;
   line-height: 1.7;
+}
+
+/* what we do */
+
+.card-what-we-do {
+  position: relative;
+}
+.card-what-we-do .label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 27px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(47, 48, 58, 0.8);
 }
 
 /* team */
