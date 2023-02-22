@@ -10,7 +10,7 @@
   --color-grey-30: #eeeeee;
   --color-white: #ffffff;
   --color-white-opacity: rgba(255, 255, 255, 0.6);
-  --transition-duration: 2000ms;
+  --transition-duration: 250ms;
   --transition-timing-func: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -26,7 +26,8 @@ h1,
 h2,
 h3,
 p,
-figure {
+figure,
+dialog {
   margin: 0;
 }
 
@@ -42,8 +43,8 @@ ul {
 }
 
 img {
-  width: 100%;
   display: block;
+  width: 100%;
 }
 
 .container {
@@ -351,7 +352,8 @@ ul.contact-container {
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-func);
 }
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--color-primary);
   fill: var(--color-white);
   transition: background-color, fill;
@@ -407,26 +409,27 @@ ul.contact-container {
 
 .card-image {
   position: relative;
+  overflow: hidden;
 }
 .card-product .card-overlay {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
   height: 100%;
   padding: 49px 24px;
-  transform: scaleY(0);
+  transform: translateY(100%);
   background: rgba(33, 150, 243, 0.9);
   font-size: 18px;
   line-height: 1.56;
   color: var(--color-white);
-  transform-origin: bottom;
   transition: transform;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-func);
 }
 
 .card-product:hover .card-overlay {
-  transform: scaleY(1);
+  transform: translateY(0%);
   transition: transform;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-func);
@@ -498,7 +501,8 @@ ul.contact-container {
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-func);
 }
-.footer .social-link:hover {
+.footer .social-link:hover,
+.footer .social-link:focus {
   background-color: var(--color-primary);
   transition: background-color;
   transition-duration: var(--transition-duration);
